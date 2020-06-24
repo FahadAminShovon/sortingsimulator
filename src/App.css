@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+
+.container{
+  height: 100vw;
+  width: 100vw;
+  background-image: linear-gradient(to right, #636FA4, #E8CBC0);
+  padding-top: 200px;
+}
+
+
+.base{
+  display: flex;
+  height: 75vh;
+  width: 80vw;
+  background-color: #CCE9F6;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 10px 10px 8px rgba(169, 180, 236, 0.424);
+  border-bottom: 100px solid #636FA4; 
+  padding: 2rem;
+  padding-bottom: 0rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+
+.item {
+  height: 65vh;
+  width: 1rem;
+  background-image: linear-gradient(to bottom, rgba(0, 60, 255, 0.719), rgba(0, 0, 255, 0.335));
+  border-top: 2px solid rgb(0, 0, 114);
+  border-right: 2px solid rgb(0, 0, 114);
+  border-left: 2px solid rgb(0, 0, 114);
+  margin: 0em .08vh;
+}
