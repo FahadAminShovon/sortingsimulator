@@ -1,0 +1,19 @@
+.array-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    box-sizing: border-box;
+    padding: 0px 200px;
+    border-bottom: 2px solid red;
+    height: 800px;
+}
+
+
+.array-item{
+    width: 2px;
+    background-color: rgb(15, 117, 117);
+    margin: 0.2px 2px;
+}
+
+
+

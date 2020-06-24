@@ -64,12 +64,12 @@ export const SortContainer = () => {
         <div>
             {/* <div style={{height:"100px", width:"100px", background:"red", zIndex:"1"}}></div> */}
             <button onClick = {sortArray} style={{color:"red", background:"red"}}>sort</button>
-            <motion.div className="base"
+            <div className="base"
                 variants={baseVariant}
                 initial="hidden"
                 animate="visible">
                 {numbers.map(number => <Bar key={uniqid()} height={number}/>)}
-            </motion.div>
+            </div>
         </div>
 
     );

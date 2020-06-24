@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
-import { SortContainer } from './components/sort_simulator';
+import Visualizer from './components/visualizer';
 
 
 function App() {
   return (
     <div className="App">
-      <div className="container">
-        <SortContainer/>
-      </div>
+      <Visualizer/>
     </div>
   );
 }

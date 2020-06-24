@@ -15,10 +15,10 @@ const Bar = ({height}) => {
     return ( 
         <div className="numberBar">
         <div className="number">{height}</div>
-        <motion.div
-        variants = {childVarient}
+        <div
+        style= {{height:`${height}vh`}}
         className="item">
-        </motion.div>
+        </div>
         </div>
 
     );
