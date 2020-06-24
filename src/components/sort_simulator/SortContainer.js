@@ -33,13 +33,44 @@ export const SortContainer = () => {
         setNumbers(arr);
     },[])
 
+    const sortArray = () => {
+        var i = 0;                  //  set your counter to 1
+        const arr = numbers.slice();
+
+        function myLoop() {         //  create a loop function
+          setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+            console.log('hello');   //  your code here
+            if (i < 63) {
+                for(let j = i+1; j<64; j++){
+                    if(arr[i] > arr[j]){
+                        const temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp
+                        setNumbers(arr)
+                        console.log("swaping")
+                    }
+                    console.log(i,j)
+                }
+                i++;
+              myLoop();             
+            }                       
+          }, 4000)
+        }
+        
+        myLoop();   
+    }
 
     return ( 
-        <motion.div className="base"
-            variants={baseVariant}
-            initial="hidden"
-            animate="visible">
-            {numbers.map(number => <Bar key={uniqid()} height={number}/>)}
-        </motion.div>
+        <div>
+            {/* <div style={{height:"100px", width:"100px", background:"red", zIndex:"1"}}></div> */}
+            <button onClick = {sortArray} style={{color:"red", background:"red"}}>sort</button>
+            <motion.div className="base"
+                variants={baseVariant}
+                initial="hidden"
+                animate="visible">
+                {numbers.map(number => <Bar key={uniqid()} height={number}/>)}
+            </motion.div>
+        </div>
+
     );
 }
