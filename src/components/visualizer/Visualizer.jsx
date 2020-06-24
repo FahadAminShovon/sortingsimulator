@@ -9,10 +9,30 @@ const Visualizer = () => {
     }
     const resetArray = () => {
         const arr = [];
-        for(let i = 0; i < 200; i++){
-            arr.push(randomNumberGenerator(5, 750))
+        for(let i = 0; i < 250; i++){
+            arr.push(randomNumberGenerator(5, 800))
         }
         setArr(arr);
+    }
+
+    const selectionSort = () => {
+        const elements = document.getElementsByClassName("array-item");
+        // elements[0].style.backgroundColor = "red"
+        // console.log("to be continued")
+        for(let i = 0; i < elements.length ; i++){
+            setTimeout(() => {
+                elements[i].style.backgroundColor = "red";
+            }, i* 10)
+            // setTimeout(() => {
+            //     elements[i].style.backgroundColor = "rgb(15, 117, 117)";
+            // }, i* 15)
+            // for(let j = 0; j< elements.length; j++){
+            //     setTimeout(() => {
+            //         elements[i].style.backgroundColor = "red"
+            //         elements[j].style.backgroundColor = "red"
+            //     }, i*10000)
+            // }
+        }
     }
     
     useEffect(() => {
@@ -20,12 +40,20 @@ const Visualizer = () => {
     },[])
 
     return ( 
-        <div>
-            <div className="array-container">
-                {arr.map((value, idx) => 
-                <div key={idx} className="array-item" style={{height:`${value}px`}}></div>)}
+        <div className="container-fluid">
+        <div className="d-flex m-5">
+            <button className="btn btn-primary " onClick={resetArray}>Reset</button>
+            <div className="mr-auto"></div>
+            <div className="btn-group" role="group" aria-label="Basic example">
+                <button type="button" onClick = {selectionSort} className="btn btn-primary">Selection Sort</button>
             </div>
-            <button className="reset-button btn btn-primary float-left mt-3 ml-3" onClick={resetArray}>reset</button>
+        </div>
+
+
+            <div className="d-flex justify-content-center align-items-end flex-wrap array-container">
+                {arr.map((value, idx) => 
+                <div key={idx} className="array-item" style={{height: `${value}px`}}></div>)}
+            </div>
         </div>
     );
 }

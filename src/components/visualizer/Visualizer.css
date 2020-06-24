@@ -1,10 +1,5 @@
 .array-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    box-sizing: border-box;
-    padding: 0px 200px;
-    border-bottom: 2px solid red;
+    border-bottom: 3px solid red;
     height: 800px;
 }
 
