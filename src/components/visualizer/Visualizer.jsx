@@ -3,6 +3,7 @@ import './Visualizer.css'
 import { selectionSortAnimations } from '../algorithms/selectionSort';
 
 const ANIMATION_SPEED_MS = 10;
+const NUM_OF_BARS = 50;
 
 
 const Visualizer = () => {
@@ -14,7 +15,7 @@ const Visualizer = () => {
     }
     const resetArray = () => {
         const arr = [];
-        for(let i = 0; i < 50; i++){
+        for(let i = 0; i < NUM_OF_BARS; i++){
             arr.push(randomNumberGenerator(5, 800))
         }
         setArr(arr);
@@ -79,7 +80,7 @@ const Visualizer = () => {
             <button disabled = {buttonDisable} className="btn btn-primary " onClick={resetArray}>Reset</button>
             <div className="mr-auto"></div>
             <div className="btn-group" role="group" aria-label="Basic example">
-                <button type="button" onClick = {selectionSort} className="btn btn-primary">Selection Sort</button>
+                <button disabled = {buttonDisable} type="button" onClick = {selectionSort} className="btn btn-primary">Selection Sort</button>
             </div>
         </div>
 
