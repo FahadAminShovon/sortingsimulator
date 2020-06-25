@@ -26,7 +26,7 @@ export const selectionSortAnimations = (arr) => {
         arr[i] = arr[minIndex];
         arr[minIndex] = obj.startVal;
         animations.push(obj)
-        console.log(animations.length);
+        // console.log(animations.length);
     }
 
     return {animations,swap};

@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './Visualizer.css'
 import { selectionSortAnimations } from '../algorithms/selectionSort';
 
-const ANIMATION_SPEED_MS = 10;
-const NUM_OF_BARS = 50;
+let ANIMATION_SPEED_MS = 15;
+let NUM_OF_BARS = 50;
+let MAXX = 750;
 
 
 const Visualizer = () => {
@@ -16,7 +17,7 @@ const Visualizer = () => {
     const resetArray = () => {
         const arr = [];
         for(let i = 0; i < NUM_OF_BARS; i++){
-            arr.push(randomNumberGenerator(5, 800))
+            arr.push(randomNumberGenerator(5, MAXX))
         }
         setArr(arr);
 
@@ -69,14 +70,18 @@ const Visualizer = () => {
 
         }
     }
-    
+    console.log(window.innerWidth)
     useEffect(() => {
+        // NUM_OF_BARS = Math.floor(window.innerWidth/36)
+        // MAXX = Math.floor(window.innerHeight - 150)
+        // ANIMATION_SPEED_MS = (ANIMATION_SPEED_MS * 50)/NUM_OF_BARS
         resetArray();
+        console.log(window.innerWidth)
     },[])
 
     return ( 
         <div className="container-fluid">
-        <div className="d-flex m-5">
+        <div className="d-flex mt-5">
             <button disabled = {buttonDisable} className="btn btn-primary " onClick={resetArray}>Reset</button>
             <div className="mr-auto"></div>
             <div className="btn-group" role="group" aria-label="Basic example">
@@ -87,7 +92,12 @@ const Visualizer = () => {
 
             <div className="d-flex justify-content-center align-items-end flex-wrap array-container">
                 {arr.map((value, idx) => 
-                <div key={idx} className="array-item" style={{height: `${value}px`, color:`rgb(15, 117, 117)`}}></div>)}
+                <div key={idx} className="array-item" 
+                style={{
+                    height: `${value}px`, 
+                    color:`rgb(15, 117, 117)` ,
+                    width:`${window.innerWidth/(window.innerWidth < 1024 ? 140 : 80)}px`}}>
+                </div>)}
             </div>
         </div>
     );

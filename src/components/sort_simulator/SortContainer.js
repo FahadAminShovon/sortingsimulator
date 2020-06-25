@@ -52,9 +52,9 @@ export const SortContainer = () => {
                     console.log(i,j)
                 }
                 i++;
-                myLoop();             
+              myLoop();             
             }                       
-            }, 4000)
+          }, 4000)
         }
         
         myLoop();   
