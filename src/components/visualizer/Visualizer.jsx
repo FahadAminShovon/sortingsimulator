@@ -16,15 +16,20 @@ const Visualizer = () => {
             arr.push(randomNumberGenerator(5, 800))
         }
         setArr(arr);
+
+        const elements = document.getElementsByClassName("array-item");
+        for(let i = 0; i < elements.length ; i++){
+            elements[i].style.backgroundColor = 'rgb(15, 117, 117)'
+        }
+
     }
 
     const selectionSort = () => {
         const elements = document.getElementsByClassName("array-item");
         const {animations} = selectionSortAnimations(arr)
 
-        let counter = arr.length * 2 -2;
-        let incr = counter -1 ;
-        let toggler = 0;
+        let counter = arr.length - 1;
+        let incr = counter ;
 
         for(let i = 0; i < animations.length ; i++){
 
@@ -38,13 +43,8 @@ const Visualizer = () => {
                     if(startIndex === arr.length-2 )elements[arr.length -1].style.backgroundColor = "green"
 
                 }, i* ANIMATION_SPEED_MS)
-                console.log("pre counter",counter)
-                console.log("post incr",incr)
                 counter+= incr;
-                incr-=2
-                console.log("post counter",counter)
-                console.log("post incr",incr)
-                toggler = toggler ? 0 : 1;
+                incr-=1
             }
             else {
                 const {start, minIndex,iter, oldMinIndex} = animations[i];

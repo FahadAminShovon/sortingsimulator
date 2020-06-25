@@ -5,18 +5,11 @@ export const selectionSortAnimations = (arr) => {
         let minIndex = i;
         let oldMinIndex = i;
         for(let j = i+1; j < arr.length; j++){
-            let obj = {
-                start: i,
-                minIndex,
-                oldMinIndex,
-                iter: j
-            }
-            animations.push(obj)
             if(arr[j] <= arr[minIndex]){
                 oldMinIndex = minIndex;
                 minIndex = j;
             }
-            obj = {
+            const obj = {
                 start: i,
                 minIndex,
                 oldMinIndex,
