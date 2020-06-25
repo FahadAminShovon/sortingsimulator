@@ -7,6 +7,8 @@ const ANIMATION_SPEED_MS = 10;
 
 const Visualizer = () => {
     const [arr, setArr] = useState([]);
+    const [buttonDisable, setButtonDisable] = useState(false);
+    
     const randomNumberGenerator = (minn, maxx) => {
         return Math.floor(Math.random() * (maxx - minn) + minn);
     }
@@ -24,7 +26,9 @@ const Visualizer = () => {
 
     }
 
-    const selectionSort = () => {
+    const selectionSort = async () => {
+        await setButtonDisable(true)
+
         const elements = document.getElementsByClassName("array-item");
         const {animations} = selectionSortAnimations(arr)
 
@@ -40,7 +44,10 @@ const Visualizer = () => {
                     elements[startIndex].style.backgroundColor = `green`
                     elements[minIndex].style.height = `${startVal}px`
                     if(minIndex !== startIndex )elements[minIndex].style.backgroundColor = "rgb(15, 117, 117)"
-                    if(startIndex === arr.length-2 )elements[arr.length -1].style.backgroundColor = "green"
+                    if(startIndex === arr.length-2 ){
+                        elements[arr.length -1].style.backgroundColor = "green"
+                        setButtonDisable(false)
+                    }
 
                 }, i* ANIMATION_SPEED_MS)
                 counter+= incr;
@@ -69,7 +76,7 @@ const Visualizer = () => {
     return ( 
         <div className="container-fluid">
         <div className="d-flex m-5">
-            <button className="btn btn-primary " onClick={resetArray}>Reset</button>
+            <button disabled = {buttonDisable} className="btn btn-primary " onClick={resetArray}>Reset</button>
             <div className="mr-auto"></div>
             <div className="btn-group" role="group" aria-label="Basic example">
                 <button type="button" onClick = {selectionSort} className="btn btn-primary">Selection Sort</button>
