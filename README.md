@@ -1,3 +1,6 @@
+Checkout the live project **[here.](https://fahadaminshovon.github.io/sortingsimulator/)**
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
