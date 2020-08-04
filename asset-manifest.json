@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/sortingsimulator/static/css/main.0796dbb2.chunk.css",
-    "main.js": "/sortingsimulator/static/js/main.9a19b6e4.chunk.js",
-    "main.js.map": "/sortingsimulator/static/js/main.9a19b6e4.chunk.js.map",
+    "main.css": "/sortingsimulator/static/css/main.0c5e916f.chunk.css",
+    "main.js": "/sortingsimulator/static/js/main.16ed080e.chunk.js",
+    "main.js.map": "/sortingsimulator/static/js/main.16ed080e.chunk.js.map",
     "runtime-main.js": "/sortingsimulator/static/js/runtime-main.2e1d07f3.js",
     "runtime-main.js.map": "/sortingsimulator/static/js/runtime-main.2e1d07f3.js.map",
     "static/js/2.2d8f0313.chunk.js": "/sortingsimulator/static/js/2.2d8f0313.chunk.js",
     "static/js/2.2d8f0313.chunk.js.map": "/sortingsimulator/static/js/2.2d8f0313.chunk.js.map",
     "index.html": "/sortingsimulator/index.html",
-    "precache-manifest.908c0b6f76ca05a816ddce9c08a165d0.js": "/sortingsimulator/precache-manifest.908c0b6f76ca05a816ddce9c08a165d0.js",
+    "precache-manifest.610c6b1accbbd9c7b6a9d94902461833.js": "/sortingsimulator/precache-manifest.610c6b1accbbd9c7b6a9d94902461833.js",
     "service-worker.js": "/sortingsimulator/service-worker.js",
-    "static/css/main.0796dbb2.chunk.css.map": "/sortingsimulator/static/css/main.0796dbb2.chunk.css.map",
+    "static/css/main.0c5e916f.chunk.css.map": "/sortingsimulator/static/css/main.0c5e916f.chunk.css.map",
     "static/js/2.2d8f0313.chunk.js.LICENSE.txt": "/sortingsimulator/static/js/2.2d8f0313.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2e1d07f3.js",
     "static/js/2.2d8f0313.chunk.js",
-    "static/css/main.0796dbb2.chunk.css",
-    "static/js/main.9a19b6e4.chunk.js"
+    "static/css/main.0c5e916f.chunk.css",
+    "static/js/main.16ed080e.chunk.js"
   ]
 }
