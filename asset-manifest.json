@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/sortingsimulator/static/css/main.883ceb1c.chunk.css",
+    "main.css": "/sortingsimulator/static/css/main.0796dbb2.chunk.css",
     "main.js": "/sortingsimulator/static/js/main.9a19b6e4.chunk.js",
     "main.js.map": "/sortingsimulator/static/js/main.9a19b6e4.chunk.js.map",
     "runtime-main.js": "/sortingsimulator/static/js/runtime-main.2e1d07f3.js",
@@ -8,15 +8,15 @@
     "static/js/2.2d8f0313.chunk.js": "/sortingsimulator/static/js/2.2d8f0313.chunk.js",
     "static/js/2.2d8f0313.chunk.js.map": "/sortingsimulator/static/js/2.2d8f0313.chunk.js.map",
     "index.html": "/sortingsimulator/index.html",
-    "precache-manifest.7be397e7fea0673c7af3cc9b3cce355b.js": "/sortingsimulator/precache-manifest.7be397e7fea0673c7af3cc9b3cce355b.js",
+    "precache-manifest.908c0b6f76ca05a816ddce9c08a165d0.js": "/sortingsimulator/precache-manifest.908c0b6f76ca05a816ddce9c08a165d0.js",
     "service-worker.js": "/sortingsimulator/service-worker.js",
-    "static/css/main.883ceb1c.chunk.css.map": "/sortingsimulator/static/css/main.883ceb1c.chunk.css.map",
+    "static/css/main.0796dbb2.chunk.css.map": "/sortingsimulator/static/css/main.0796dbb2.chunk.css.map",
     "static/js/2.2d8f0313.chunk.js.LICENSE.txt": "/sortingsimulator/static/js/2.2d8f0313.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2e1d07f3.js",
     "static/js/2.2d8f0313.chunk.js",
-    "static/css/main.883ceb1c.chunk.css",
+    "static/css/main.0796dbb2.chunk.css",
     "static/js/main.9a19b6e4.chunk.js"
   ]
 }
