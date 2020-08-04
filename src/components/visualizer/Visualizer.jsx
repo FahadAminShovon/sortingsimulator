@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Visualizer.css'
 import { selectionSortAnimations } from '../algorithms/selectionSort';
 
-let ANIMATION_SPEED_MS = 50;
+let ANIMATION_SPEED_MS = 30;
 let NUM_OF_BARS = 50;
 let MAXX = 72;
 

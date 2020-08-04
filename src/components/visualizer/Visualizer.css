@@ -6,9 +6,10 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    border-bottom: 2vh solid #bc4749;
+    border-bottom: 2vh solid #f25f5c;
     border-radius: 5px;
     padding-top: 5rem;
+    height: 75vh;;
 }
 
 /* .array-container::after{
@@ -30,8 +31,9 @@
     width: 1.6vw;
     background-color: #5fa8d3;
     margin: 0 0.1vw;
-    
-
+    box-sizing: border-box;
+    /* border: 0.5px solid #95d8ff; */
+    border-bottom: none;
 }
 
 .buttons{
