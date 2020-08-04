@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './Visualizer.css'
 import { selectionSortAnimations } from '../algorithms/selectionSort';
 
-let ANIMATION_SPEED_MS = 15;
+let ANIMATION_SPEED_MS = 50;
 let NUM_OF_BARS = 50;
-let MAXX = 750;
+let MAXX = 72;
 
 
 const Visualizer = () => {
@@ -17,13 +17,13 @@ const Visualizer = () => {
     const resetArray = () => {
         const arr = [];
         for(let i = 0; i < NUM_OF_BARS; i++){
-            arr.push(randomNumberGenerator(5, MAXX))
+            arr.push(randomNumberGenerator(1, MAXX))
         }
         setArr(arr);
 
         const elements = document.getElementsByClassName("array-item");
         for(let i = 0; i < elements.length ; i++){
-            elements[i].style.backgroundColor = 'rgb(15, 117, 117)'
+            elements[i].style.backgroundColor = '#5fa8d3'
         }
 
     }
@@ -42,12 +42,12 @@ const Visualizer = () => {
             if(i === counter){
                 const {start: startIndex, minIndex, startVal, minVal} = animations[i];
                 setTimeout(() => {
-                    elements[startIndex].style.height = `${minVal}px`
-                    elements[startIndex].style.backgroundColor = `green`
-                    elements[minIndex].style.height = `${startVal}px`
-                    if(minIndex !== startIndex )elements[minIndex].style.backgroundColor = "rgb(15, 117, 117)"
+                    elements[startIndex].style.height = `${minVal}vh`
+                    elements[startIndex].style.backgroundColor = `#70c1b3`
+                    elements[minIndex].style.height = `${startVal}vh`
+                    if(minIndex !== startIndex )elements[minIndex].style.backgroundColor = "#5fa8d3"
                     if(startIndex === arr.length-2 ){
-                        elements[arr.length -1].style.backgroundColor = "green"
+                        elements[arr.length -1].style.backgroundColor = "#70c1b3"
                         setButtonDisable(false)
                     }
 
@@ -58,12 +58,12 @@ const Visualizer = () => {
             else {
                 const {start, minIndex,iter, oldMinIndex} = animations[i];
                 setTimeout(()=>{
-                    if(start === iter-1)elements[arr.length-1].style.backgroundColor = "rgb(15, 117, 117)";
-                    elements[start].style.backgroundColor = "black";
-                    elements[iter].style.backgroundColor = "red";
-                    if(iter!==0)elements[iter - 1].style.backgroundColor = "rgb(15, 117, 117)";
-                    if(oldMinIndex!==start)elements[oldMinIndex].style.backgroundColor = "rgb(15, 117, 117)";
-                    elements[minIndex].style.backgroundColor = "blue";
+                    if(start === iter-1)elements[arr.length-1].style.backgroundColor = "#5fa8d3";
+                    elements[start].style.backgroundColor = "#eb5e28";
+                    elements[iter].style.backgroundColor = "#f25f5c";
+                    if(iter!==0)elements[iter - 1].style.backgroundColor = "#5fa8d3";
+                    if(oldMinIndex!==start)elements[oldMinIndex].style.backgroundColor = "#5fa8d3";
+                    elements[minIndex].style.backgroundColor = "#f4d35e";
 
                 }, i * ANIMATION_SPEED_MS)
             }
@@ -72,31 +72,29 @@ const Visualizer = () => {
     }
     console.log(window.innerWidth)
     useEffect(() => {
-        // NUM_OF_BARS = Math.floor(window.innerWidth/36)
-        // MAXX = Math.floor(window.innerHeight - 150)
-        // ANIMATION_SPEED_MS = (ANIMATION_SPEED_MS * 50)/NUM_OF_BARS
         resetArray();
         console.log(window.innerWidth)
     },[])
 
     return ( 
-        <div className="container-fluid">
-        <div className="d-flex mt-5">
-            <button disabled = {buttonDisable} className="btn btn-primary " onClick={resetArray}>Reset</button>
+        <div className="">
+        <div className="buttons">
+            <button disabled = {buttonDisable} className="btn reset-btn" onClick={resetArray}>Reset</button>
             <div className="mr-auto"></div>
-            <div className="btn-group" role="group" aria-label="Basic example">
-                <button disabled = {buttonDisable} type="button" onClick = {selectionSort} className="btn btn-primary">Selection Sort</button>
+            <div className="btn-group">
+                <button disabled = {buttonDisable} type="button" 
+                onClick = {selectionSort} className="btn sort-btn">Selection Sort</button>
             </div>
         </div>
 
 
-            <div className="d-flex justify-content-center align-items-end flex-wrap array-container">
+            <div className="array-container">
                 {arr.map((value, idx) => 
                 <div key={idx} className="array-item" 
                 style={{
-                    height: `${value}px`, 
-                    color:`rgb(15, 117, 117)` ,
-                    width:`${window.innerWidth/(window.innerWidth < 1024 ? 140 : 80)}px`}}>
+                    height: `${value}vh`, 
+                    color:`#5fa8d3` ,
+                    }}>
                 </div>)}
             </div>
         </div>
