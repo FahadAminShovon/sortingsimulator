@@ -1,2 +1,0 @@
-export {SortContainer} from "./SortContainer";
-

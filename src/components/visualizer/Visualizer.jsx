@@ -12,7 +12,7 @@ const Visualizer = () => {
     const [buttonDisable, setButtonDisable] = useState(false);
     
     const randomNumberGenerator = (minn, maxx) => {
-        return Math.floor(Math.random() * (maxx - minn) + minn);
+        return (Math.random() * (maxx - minn) + minn);
     }
     const resetArray = () => {
         const arr = [];

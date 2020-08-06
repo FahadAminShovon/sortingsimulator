@@ -34,6 +34,7 @@
     box-sizing: border-box;
     /* border: 0.5px solid #95d8ff; */
     border-bottom: none;
+    transition: height 200ms ease;
 }
 
 .buttons{
@@ -60,7 +61,7 @@
 }
 
 .btn:disabled{
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+    box-shadow: none;
     opacity: 0.5;
     cursor: default;
 }
