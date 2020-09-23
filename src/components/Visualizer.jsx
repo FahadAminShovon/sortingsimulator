@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import {
 	UNSORTED_COLOR,
-} from '../consts';
+} from '../consts/colors';
 import { resetArray } from '../util';
 import ButtonGroup from './ButtonGroup';
 

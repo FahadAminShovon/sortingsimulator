@@ -6,11 +6,14 @@ import {
     START_COLOR,
     SELECTED_COLOR,
     ITERATE_COLOR,
+} from '../consts/colors';
+
+import {
     ANIMATION_SPEED_MS
-} from '../consts';
+} from '../consts/animation';
 
 
-const selectionSortAnimations = (arr) => {
+const selectionSort = (arr) => {
     const animations = []
     const swap = []
     for (let i = 0; i < arr.length - 1; i++) {
@@ -38,7 +41,6 @@ const selectionSortAnimations = (arr) => {
         arr[i] = arr[minIndex];
         arr[minIndex] = obj.startVal;
         animations.push(obj)
-        // console.log(animations.length);
     }
 
     return {
@@ -54,7 +56,7 @@ export const selectionSortAnimate = async (arr, setButtonDisable) => {
     const elements = document.getElementsByClassName('array-item');
     const {
         animations
-    } = selectionSortAnimations(arr);
+    } = selectionSort(arr);
 
     let counter = arr.length - 1;
     let incr = counter;

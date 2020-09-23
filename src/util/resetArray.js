@@ -1,5 +1,5 @@
-import { NUM_OF_BARS, UNSORTED_COLOR, MAXX } from "../consts";
-
+import { NUM_OF_BARS, MAXX } from "../consts/animation";
+import { UNSORTED_COLOR } from "../consts/colors";
 
 const randomNumberGenerator = (minn, maxx) => {
 	return Math.random() * (maxx - minn) + minn;
