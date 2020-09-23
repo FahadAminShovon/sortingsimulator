@@ -15,7 +15,6 @@ import {
 
 const selectionSort = (arr) => {
     const animations = []
-    const swap = []
     for (let i = 0; i < arr.length - 1; i++) {
         let minIndex = i;
         let oldMinIndex = i;
@@ -43,10 +42,7 @@ const selectionSort = (arr) => {
         animations.push(obj)
     }
 
-    return {
-        animations,
-        swap
-    };
+    return animations;
 }
 
 
@@ -54,9 +50,7 @@ export const selectionSortAnimate = async (arr, setButtonDisable) => {
     await setButtonDisable(true);
 
     const elements = document.getElementsByClassName('array-item');
-    const {
-        animations
-    } = selectionSort(arr);
+    const animations = selectionSort(arr);
 
     let counter = arr.length - 1;
     let incr = counter;
