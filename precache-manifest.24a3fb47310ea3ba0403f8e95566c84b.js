@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6247a1fd1438ded9b4a3f135e62a08a8",
+    "revision": "1bfdf19555ce52470e61a6b6f4afcb1f",
     "url": "/sortingsimulator/index.html"
   },
   {
-    "revision": "adb0f15b683115ebecd4",
+    "revision": "0610b65b9788f456f7be",
     "url": "/sortingsimulator/static/css/main.dd705bb7.chunk.css"
   },
   {
-    "revision": "37c5932dd9002c154f40",
-    "url": "/sortingsimulator/static/js/2.4f56f2c0.chunk.js"
+    "revision": "49a52bb8fc5fff262d01",
+    "url": "/sortingsimulator/static/js/2.3f2bc873.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/sortingsimulator/static/js/2.4f56f2c0.chunk.js.LICENSE.txt"
+    "url": "/sortingsimulator/static/js/2.3f2bc873.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "adb0f15b683115ebecd4",
-    "url": "/sortingsimulator/static/js/main.c4c4c5b1.chunk.js"
+    "revision": "0610b65b9788f456f7be",
+    "url": "/sortingsimulator/static/js/main.0f5752a5.chunk.js"
   },
   {
     "revision": "bdcbd9749efd1cfd82e7",
