@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Visualizer.css';
 import PropTypes from 'prop-types';
-
-import {
-	UNSORTED_COLOR,
-} from '../consts/colors';
 import { resetArray } from '../util';
 import ButtonGroup from './ButtonGroup';
 
@@ -17,7 +13,6 @@ function Bars({arr}) {
 				className='array-item'
 				style={{
 					height: `${value}vh`,
-					color: UNSORTED_COLOR,
 				}}
 			></div>
 		))}

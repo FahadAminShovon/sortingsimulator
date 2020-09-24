@@ -37,7 +37,7 @@ module.exports = {
 		'import/newline-after-import': 'warn',
 		'import/prefer-default-export': 'off',
 		'no-plusplus': 'off',
-		
+		'no-continue': 'off'
 	},
 	settings: {
 		'import/resolver': {

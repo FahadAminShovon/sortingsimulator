@@ -46,8 +46,9 @@ const selectionSort = (arr) => {
 }
 
 
-export const selectionSortAnimate = async (arr, setButtonDisable) => {
+export const selectionSortAnimate = async (arr, setButtonDisable, setIsSorted) => {
     await setButtonDisable(true);
+    await setIsSorted(true);
 
     const elements = document.getElementsByClassName('array-item');
     const animations = selectionSort(arr);
